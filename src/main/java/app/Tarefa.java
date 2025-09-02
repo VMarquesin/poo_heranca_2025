@@ -1,23 +1,7 @@
 package app;
 
-public class Tarefa{
-    private long id;
-    private String descricao;
+public class Tarefa extends Atividade {
     private boolean isConcluido;
-
-    public void setId(long id){
-        this.id = id;
-    }
-    public long getId(){
-        return this.id;
-    }
-
-    public void setDescricao(String descricao){
-        this.descricao = descricao;
-    }
-    public String getDescricao(){
-        return this.descricao;
-    }
 
     public void setIsConcluido(boolean isConcluido){
         this.isConcluido = isConcluido;
