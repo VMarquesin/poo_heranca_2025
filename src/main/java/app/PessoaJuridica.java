@@ -2,39 +2,39 @@ package app;
 
 import java.time.LocalDate;
 
-public class PessoaJuridica{
-    private String nome;
-    private String endereco;
-    private LocalDate dataCriacao;
-    private String nomeFantasma;
-    private String cnpj;
+public class PessoaJuridica extends Pessoa{
+    // private String nome;
+        // private String endereco;
+            // private LocalDate dataCriacao;
+                private String nomeFantasma;
+                    private String cnpj;
 
-    public String getNome(){
-        return nome;
-    }
-    public void setNome(String nome){
-        this.nome = nome;
-    }
+// public String getNome(){
+//     return nome;
+// }
+// public void setNome(String nome){
+//     this.nome = nome;
+// }
 
-    public String getEndereco(){
-        return endereco;
-    }
-    public void setEndereco(String endereco){
-        this.endereco = endereco;
-    }
+// public String getEndereco(){
+//     return endereco;
+// }
+// public void setEndereco(String endereco){
+//     this.endereco = endereco;
+// }
 
-    public LocalDate getDataCriacao(){
-        return dataCriacao;
-    }
-    public void setDataCriacao(LocalDate dataCriacao){
-        this.dataCriacao = dataCriacao;
-    }
+// public LocalDate getDataCriacao(){
+//     return dataCriacao;
+// }
+// public void setDataCriacao(LocalDate dataCriacao){
+//     this.dataCriacao = dataCriacao;
+// }
 
     public String getNomeFantasma(){
         return nomeFantasma;
     }
     public void setNomeFantasma(String nomeFantasma){
-        this.nomeFantasma = nomeFantasma;
+    this.nomeFantasma = nomeFantasma;
     }
 
     public String getCnpj(){
@@ -45,15 +45,13 @@ public class PessoaJuridica{
     }
 
     public PessoaJuridica(String nome, String endereco, String nomeFantasma, String cnpj){
-        this.setNome(nome);
-        this.setEndereco(endereco);
-        this.setDataCriacao(LocalDate.now());
-        this.setNomeFantasma(nomeFantasma);
-        this.setCnpj(cnpj);
+        super(nome, endereco, LocalDate.now());
+        setNomeFantasma(nomeFantasma);
+        setCnpj(cnpj);
     }
 
-    // Dentro da classe PessoaJuridica
-
+// Dentro da classe PessoaJuridica
+    @Override
     public String exibirInformacoes(){
         return "--- Informações de Pessoa Jurídica ---\n" +
             "Razão Social: " + this.getNome() + "\n" +
